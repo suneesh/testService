@@ -1,4 +1,4 @@
-﻿namespace TestService
+﻿namespace cyberdome.parentalcontrol
 {
     partial class CDService
     {

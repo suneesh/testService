@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("TestService")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("CDService")]
+[assembly: AssemblyDescription("Cyberdome parental cotrol service")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("TestService")]
+[assembly: AssemblyCompany("Kerala Police Cyberdome")]
+[assembly: AssemblyProduct("Parental control")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
