@@ -1,6 +1,6 @@
 ﻿namespace TestService
 {
-    partial class Service2
+    partial class CDService
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            this.ServiceName = "Service2";
+            this.ServiceName = "Service1";
         }
 
         #endregion

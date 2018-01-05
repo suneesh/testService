@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NLog;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,21 +11,25 @@ using System.Threading.Tasks;
 
 namespace TestService
 {
-    partial class Service2 : ServiceBase
+    partial class KeepAliveCD : ServiceBase
     {
-        public Service2()
+        private static Logger logger = LogManager.GetCurrentClassLogger();
+
+        public KeepAliveCD()
         {
             InitializeComponent();
         }
 
         protected override void OnStart(string[] args)
         {
-            // TODO: Add code here to start your service.
+            logger.Trace("Keepalive servie start");
         }
 
         protected override void OnStop()
         {
-            // TODO: Add code here to perform any tear-down necessary to stop your service.
+            logger.Trace("Keepalive servie stop");
         }
+
+
     }
 }

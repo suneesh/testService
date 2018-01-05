@@ -5,24 +5,29 @@ using System.ComponentModel;
 using System.Configuration.Install;
 using System.Linq;
 using System.Threading.Tasks;
+using NLog;
 
 namespace TestService
 {
     [RunInstaller(true)]
-    public partial class TestServiceInstaller : Installer
+    public partial class InstallerScript : Installer
     {
-        public TestServiceInstaller()
+        private static Logger logger = LogManager.GetCurrentClassLogger();
+
+        public InstallerScript()
         {
             
         }
 
         public override void Install(IDictionary stateSaver)
         {
+            logger.Trace("Installation started");
             base.Install(stateSaver);
         }
 
         public override void Uninstall(IDictionary savedState)
         {
+            logger.Trace("unnstallation started");
             base.Uninstall(savedState);
         }
 

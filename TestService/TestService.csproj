@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.4.12\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
@@ -46,26 +50,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Service2.cs">
+    <Compile Include="KeepAliveCD.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Service2.Designer.cs">
-      <DependentUpon>Service2.cs</DependentUpon>
+    <Compile Include="KeepAliveCD.Designer.cs">
+      <DependentUpon>KeepAliveCD.cs</DependentUpon>
     </Compile>
-    <Compile Include="TestServiceInstaller.cs">
+    <Compile Include="InstallerScript.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Service1.cs">
+    <Compile Include="CDService.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Service1.Designer.cs">
-      <DependentUpon>Service1.cs</DependentUpon>
+    <Compile Include="CDService.Designer.cs">
+      <DependentUpon>CDService.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
